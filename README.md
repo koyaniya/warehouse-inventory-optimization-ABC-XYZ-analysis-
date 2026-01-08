@@ -70,8 +70,8 @@ Build an interactive Tableau dashboard for store- and category-level inventory m
 ├── figures/            # Generated charts and visualizations       
 ├── sql_queries/        # SQL queries for pre analysis stage              
 ├── outputs/            # interactive Tableau dashboard       
-├── README.md
-├── README 한국어.md    #프로젝트 설명
+├── README.md        
+├── README 한국어.md    #프로젝트 설명      
 
 ## Conclusion
 
