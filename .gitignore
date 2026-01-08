@@ -1,0 +1,17 @@
+# ===============================
+# Ignore raw data files
+# ===============================
+data/
+
+# Optional: ignore common data formats
+*.csv
+*.xlsx
+*.parquet
+
+
+# ===============================
+# Jupyter / Python
+# ===============================
+.ipynb_checkpoints/
+__pycache__/
+*.pyc

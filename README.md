@@ -1,78 +1,78 @@
-# warehouse-inventory-optimization
-Data analysis of warehouse inventory using Kaggle’s Inventory Analysis dataset
+__# Inventory Optimization using ABC–XYZ Analysis__
 
-## Goal:
-Conduct an inventory analysis to identify areas for improvement and optimize inventory management practices
+## Dataset
 
-## Background 
-The company operates a chain of retail stores selling alcohol products such as wine, vodka, and whiskey. Inventory is purchased directly from a range of vendors and distributed across multiple store locations. With a wide assortment of products and varying vendor lead times, the company faces challenges in maintaining optimal inventory levels—leading to occasional stockouts, overstocked items, and inefficient purchasing practices.
+The dataset used in this project is publicly available on Kaggle:
 
-To address these issues, this project utilizes the Inventory Analysis dataset from Kaggle to analyze purchasing patterns, inventory turnover, vendor performance, and sales trends. The insights gained will be used to develop a data-driven inventory management strategy tailored for a retail operation handling finished goods.
+- [Inventory Analysis Case Study Dataset](https://www.kaggle.com/datasets/bhanupratapbiswas/inventory-analysis-case-study/data)
 
-## Objectives:
-The primary objectives of this finished goods inventory analysis are:
+## Project Overview
 
-1. Determine optimal inventory levels for finished products across stores
-2. Identify and reduce stockouts and excess inventory to improve service levels and reduce costs
-3. Analyze inventory turnover and carrying costs to optimize working capital
-4. Streamline the purchasing and replenishment processes to improve operational efficiency
-5. Develop a sustainable inventory management strategy for future scalability
+This project focuses on inventory optimization by integrating profitability (ABC analysis), demand variability (XYZ analysis), and stock status (Dead Stock).
+The goal is to transform large-scale transactional data into actionable, decision-oriented insights for inventory management.
 
-## Tasks
-To meet these objectives, the following tasks will be performed:
+Using Python, the project recalculates product-level profitability, analyzes demand stability, and builds a decision matrix that supports strategic inventory actions such as protection, optimization, and discontinuation.
 
-1. Inventory Turnover Analysis
-- Measure how efficiently products are being sold and replenished
-- Highlight slow- and fast-moving SKUs
+Please refer to the full explanation in Korean for details(자세한 설명은 아래 한국어 문서를 참고해 주세요.):
+- [재고 최적화: ABC 및 XYZ 분석](https://www.notion.so/ABC-XYZ-273daa9f0aca810f8df8eda345afdd6a?source=copy_link)
 
-2) ABC Analysis
-- Classify SKUs based on revenue contribution
-- Focus management attention on high-impact items
+## Key Objectives
 
-3) Reorder Point (ROP) Analysis
-- Estimate reorder points based on sales velocity and lead times
-- Prevent stockouts by setting proper thresholds
-
-4) Lead Time Analysis
-- Evaluate delivery timing consistency for each vendor
-- Identify vendors causing frequent delays
-
-5) Carrying Cost Analysis
-- Calculate storage and holding costs based on average inventory levels
-- Identify areas for cost reduction
-
-6) Vendor Performance Analysis
-- Compare vendors by spend, SKU variety, delivery frequency, and reliability
-- Recommend high-value, consistent suppliers
-
-7) Process Improvement
-- Analyze purchasing and replenishment workflows
-- Suggest improvements for smoother store operations
-
-8) Demand Forecasting
-- Forecast future demand using historical sales
-- Support better ordering and inventory planning decisions
+Identify high-impact products driving the majority of profit
+![ABC](figures/profit_and_qty_distribution_per_category.png)
 
 
-## Deliverables
-Based on the analysis of sales, inventory, purchasing, and vendor performance, the following deliverables will be provided:
+Evaluate demand stability using coefficient of variation (CV)
+![XYZ](figures/xyz_category_share.png)
 
-1) Optimal Inventory Levels
-Recommendations for maintaining appropriate inventory levels of finished goods across all store locations to reduce both stockouts and overstocking.
+Detect low-performing and dead stock products
 
-2) Reorder Point Calculations
-Calculated reorder points for key products based on sales velocity and lead times to improve inventory availability and prevent missed sales.
+Provide clear inventory action recommendations per SKU
 
-3) Vendor Performance Insights
-Comparative analysis of vendor reliability, SKU diversity, and purchasing frequency to inform better supplier management decisions.
+## Tools & Methodologies
 
-4) Inventory Turnover & Carrying Cost Analysis
-Evaluation of inventory turnover ratios and holding costs to identify slow-moving products and reduce inventory-related expenses.
+Python: pandas, numpy
 
-5) Process Improvement Recommendations
-Suggestions for optimizing purchasing and replenishment workflows, particularly around shared purchase orders and inter-store coordination.
+Visualization: matplotlib, seaborn
 
-6) Inventory Management Strategy
-A sustainable inventory management approach tailored for multi-store retail operations, designed to enhance operational efficiency and support future scalability.
+## Methodologies:
 
-By conducting this inventory optimization project, the retail company aims to reduce inventory costs, improve product availability, strengthen vendor relationships, and enhance overall operational efficiency across its store network.
+ABC (Pareto) analysis based on profit contribution
+
+XYZ analysis based on demand variability (CV)
+
+Dead Stock identification (no sales over 12 months)
+
+Decision Matrix (ABC × XYZ × Profitability)
+
+## Key Outputs
+
+Product-level profit recalculation accounting for price changes
+
+ABC and XYZ categorization for all SKUs
+![Decision_matrix](figures/Decision_matrix.png)
+
+Decision matrix with actionable inventory strategies
+
+Static analytical dashboards (Python)
+![dashboard](figures/Dashboard.png)
+
+Ready-to-extend structure for Tableau dashboards
+
+## Future Work
+
+Apply unsupervised learning (clustering) for deeper product segmentation
+
+Build an interactive Tableau dashboard for store- and category-level inventory monitoring
+
+## Repository Structure
+├── notebooks/          # Analysis notebooks (EDA, ABC, XYZ, Decision Matrix)
+├── figures/            # Generated charts and visualizations
+├── sql_queries/        # SQL queries for pre analysis stage
+├── outputs/            # interactive Tableau dashboard 
+├── README.md
+├── README 한국어.md    #프로젝트 설명
+
+## Conclusion
+
+This project demonstrates how combining profitability, demand behavior, and inventory data enables more efficient, scalable, and data-driven inventory management decisions.
