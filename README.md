@@ -66,10 +66,10 @@ Apply unsupervised learning (clustering) for deeper product segmentation
 Build an interactive Tableau dashboard for store- and category-level inventory monitoring
 
 ## Repository Structure
-├── notebooks/          # Analysis notebooks (EDA, ABC, XYZ, Decision Matrix)
-├── figures/            # Generated charts and visualizations
-├── sql_queries/        # SQL queries for pre analysis stage
-├── outputs/            # interactive Tableau dashboard 
+├── notebooks/          # Analysis notebooks (EDA, ABC, XYZ, Decision Matrix)   
+├── figures/            # Generated charts and visualizations       
+├── sql_queries/        # SQL queries for pre analysis stage              
+├── outputs/            # interactive Tableau dashboard       
 ├── README.md
 ├── README 한국어.md    #프로젝트 설명
 
